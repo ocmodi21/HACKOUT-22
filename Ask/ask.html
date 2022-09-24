@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <title>Ask</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* background-color: cornsilk; */
+            margin: 40px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar {
+            margin: 0px;
+            justify-content: space-between;
+            display: flex;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .navbar .nav {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .navbar .nav .left span {
+            margin-left: 10px;
+            font-size: 30px;
+            /* font-weight: 600; */
+            font-family: 'Lato', sans-serif;
+        }
+
+        .navbar .nav .right {
+            width: 42%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar .nav .right ul {
+            margin: 10px;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            text-align: center;
+        }
+
+        .navbar .nav .right li a {
+            padding: 10px;
+            margin: 0;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .navbar .nav .right li a:hover {
+            color: rgba(0, 0, 0, );
+            color: white;
+        }
+
+        .navbar .nav .right .loginreg {
+            margin: 5px;
+        }
+
+        .navbar .nav .right .loginreg a {
+            padding: 4px 18px;
+            text-decoration: none;
+            outline: none;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            transition: all 0.6 ease;
+            display: inline-block;
+        }
+
+        .navbar .nav .right .loginreg a:hover {
+            color: rgba(0, 0, 0, 0.3);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .ask-container {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+
+        .ask {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .ask-question {
+            margin-top: 40px;
+            font-size: 20px;
+        }
+
+        .ask-ref {
+            font-size: 14px;
+        }
+
+        .ask-btn {
+            border-radius: 6px;
+            height: 42px;
+            width: 150px;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            color: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 0, 0, 0.4);
+        }
+
+        .ask-btn:hover {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (min-width: 700px) and (max-width: 1000px) {
+            body {
+                /* background-color: cornsilk; */
+                margin: 25px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .main {
+                background-color: rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-right: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            .navbar {
+                margin: 0px;
+                justify-content: space-between;
+                display: flex;
+                padding: 5px;
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+            }
+            .navbar .nav {
+                width: 100%;
+                justify-content: space-between;
+            }
+            .navbar .nav .left span {
+                margin-left: 10px;
+                font-size: 28px;
+                /* font-weight: 600; */
+                font-family: 'Lato', sans-serif;
+            }
+            .navbar .nav .right {
+                width: 65%;
+                font-size: 12px;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+            }
+            .navbar .nav .right ul {
+                margin: 10px;
+                padding: 0;
+                display: flex;
+                list-style: none;
+                text-align: center;
+            }
+            .navbar .nav .right li a {
+                padding: 6px;
+                margin: 0;
+                color: rgba(0, 0, 0, 0.5);
+                font-weight: 500;
+                text-decoration: none;
+            }
+            .navbar .nav .right li a:hover {
+                color: rgba(0, 0, 0, );
+                color: white;
+            }
+            .navbar .nav .right .loginreg {
+                margin: 5px;
+            }
+            .navbar .nav .right .loginreg a {
+                padding: 4px 10px;
+                text-decoration: none;
+                outline: none;
+                font-weight: 500;
+                color: rgba(0, 0, 0, 0.5);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-right: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                background-color: rgba(0, 0, 0, 0.3);
+                border-radius: 4px;
+                transition: all 0.6 ease;
+                display: inline-block;
+            }
+            .navbar .nav .right .loginreg a:hover {
+                color: rgba(0, 0, 0, 0.3);
+                color: white;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main" id="main">
+        <div class="innermain">
+            <nav class="navbar">
+                <div class="nav">
+                    <div class="left"><span>Querious</span></div>
+                    <div class="right">
+                        <ul>
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="#">Ask</a></li>
+                            <li><a href="/answer">Answer</a></li>
+                            <li><a href="#">Code</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+
+                        <div class="loginreg">
+                            <a class="login" href="#">Log out</a>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="ask-container">
+            <div class="mt-3 ask">
+                <label for="exampleFormControlInput1" class="ask-question">Ask your doubt</label><br>
+                <label for="exampleFormControlInput1" class="ask-ref">Be specific with your doubt.</label>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1"></label>
+                <textarea class="form-control " id="exampleFormControlTextarea1" rows="6" placeholder="Type your doubt here..."></textarea>
+            </div>
+
+            <div class="submit-button">
+                <button class=" ask-btn">Ask Question</button>
+            </div>
+        </div>
+
+</body>
+
+</html>

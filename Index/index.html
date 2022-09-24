@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* background-color: cornsilk; */
+            margin: 40px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar {
+            margin: 0px;
+            justify-content: space-between;
+            display: flex;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .navbar .nav {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .navbar .nav .left span {
+            margin-left: 10px;
+            font-size: 30px;
+            /* font-weight: 600; */
+            font-family: 'Lato', sans-serif;
+        }
+
+        .navbar .nav .right {
+            width: 41%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar .nav .right ul {
+            margin: 10px;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            text-align: center;
+        }
+
+        .navbar .nav .right li a {
+            padding: 10px;
+            margin: 0;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .navbar .nav .right li a:hover {
+            color: rgba(0, 0, 0, );
+            color: white;
+        }
+
+        .navbar .nav .right .loginreg {
+            margin: 5px;
+        }
+
+        .navbar .nav .right .loginreg a {
+            padding: 4px 18px;
+            text-decoration: none;
+            outline: none;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            transition: all 0.6 ease;
+            display: inline-block;
+        }
+
+        .navbar .nav .right .loginreg a:hover {
+            color: rgba(0, 0, 0, 0.3);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .welContainer {
+            margin-top: 10px;
+            padding: 20px;
+            padding-top: 30px;
+            width: 75%;
+            height: 600px;
+            /* float: right; */
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .welContainer span {
+            font-size: 30px;
+            font-family: 'Silkscreen', cursive;
+            color: rgba(0, 0, 0, 0.6);
+            /* animation: typing steps(32), blink 1s step-end infinite;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; */
+        }
+        /* @keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent
+    }
+    10% {
+        border-color: #000;
+    }
+    20% {
+        border-color: transparent;
+    }
+    30% {
+        border-color: #000;
+    }
+    40% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #000;
+    }
+    60% {
+        border-color: transparent;
+    }
+    70% {
+        border-color: #000;
+    }
+    80% {
+        border-color: transparent;
+    }
+    90% {
+        border-color: #000;
+    }
+} */
+
+        .welContainer h2 {
+            padding-top: 60px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .welInnerContainerLeft {
+            width: 47%;
+            margin-top: 20px;
+            margin-left: 20px;
+            padding: 10px;
+            height: 230px;
+            font-weight: 700;
+            font-size: 30px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: rgba(255, 255, 255, 0.8);
+            border-radius: 4px;
+            text-align: center;
+            float: left;
+        }
+
+        .welInnerContainerLeft i {
+            padding-top: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+        }
+
+        .welInnerContainerLeft i::after {
+            margin-top: 4px;
+            content: "";
+            display: block;
+            width: 200px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .welInnerContainerLeft p {
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-top: 20px;
+            font-size: 20px;
+            font-weight: 350;
+            line-height: 1.2;
+        }
+
+        .welInnerContainerRight {
+            width: 47%;
+            margin-top: 20px;
+            margin-right: 20px;
+            padding: 10px;
+            height: 230px;
+            font-weight: 700;
+            font-size: 30px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 4px;
+            text-align: center;
+            float: right;
+        }
+
+        .welInnerContainerRight i {
+            padding-top: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+        }
+
+        .welInnerContainerRight i::after {
+            margin-top: 4px;
+            content: "";
+            display: block;
+            width: 200px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .welInnerContainerRight p {
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-top: 20px;
+            font-size: 18px;
+            line-height: 2;
+            font-weight: 350;
+            line-height: 1.2;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .welContainer .newuser {
+            /* position: absolute; */
+            padding: 20px;
+            margin-left: 20px;
+            margin-top: 278px;
+            clear: both;
+            width: 96%;
+            height: 120px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 4px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .welContainer .newuser button {
+            padding: 4px 18px;
+            outline: none;
+            font-weight: 500;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: rgba(0, 0, 0, 0.6);
+            color: rgba(0, 0, 0, 0.6);
+            border-radius: 4px;
+            transition: all 0.6 ease;
+        }
+
+        .welContainer .newuser button:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .verticalnav {
+            margin-top: 10px;
+            padding: 10px;
+            width: 24%;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .verticalnav span {
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        .verticalnav span::after {
+            content: " ";
+            margin-left: 82px;
+            display: block;
+            height: 1px;
+            width: 150px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .verticalnav h3 {
+            font-size: 24PX;
+            margin-top: 30PX;
+        }
+
+        .verticalnav .practice {
+            width: 94%;
+            height: 110px;
+            margin: 10px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+            justify-content: space-between;
+            display: flex;
+        }
+
+        .verticalnav .streak {
+            margin: 10px;
+            padding: 20px;
+            padding-top: 40px;
+            width: 94%;
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .verticalnav .streak div {
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        .cardarea {
+            width: 100%;
+            height: 100%;
+            margin-top: 10px;
+            padding: 80px;
+            justify-content: center;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        .cardarea h2 {
+            margin-top: 100px;
+        }
+
+        .cardarea p span {
+            padding: 10px;
+            font-size: 50px;
+            line-height: 0.45;
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        .cardarea .cardsConatiner {
+            margin-top: 150px;
+            width: 100%;
+            padding: 80px;
+            margin-left: 0px;
+            justify-content: center;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .cardarea .cardsConatiner .card {
+            margin: 8px;
+            padding: 10px;
+            padding-top: 40px;
+            width: 230px;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+        }
+
+        .col1 {
+            background: #000;
+        }
+
+        .col2 {
+            background: #fff;
+        }
+
+        .col3 {
+            background: #0ff;
+        }
+
+        @media (min-width: 700px) and (max-width: 1000px) {
+            body {
+                /* background-color: cornsilk; */
+                margin: 25px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .main {
+                background-color: rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-right: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            .navbar {
+                margin: 0px;
+                justify-content: space-between;
+                display: flex;
+                padding: 5px;
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+            }
+            .navbar .nav {
+                width: 100%;
+                justify-content: space-between;
+            }
+            .navbar .nav .left span {
+                margin-left: 10px;
+                font-size: 28px;
+                /* font-weight: 600; */
+                font-family: 'Lato', sans-serif;
+            }
+            .navbar .nav .right {
+                width: 42%;
+                font-size: 12px;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            .navbar .nav .right ul {
+                margin: 10px;
+                padding: 0;
+                display: flex;
+                list-style: none;
+                text-align: center;
+            }
+            .navbar .nav .right li a {
+                padding: 6px;
+                margin: 0;
+                color: rgba(0, 0, 0, 0.5);
+                font-weight: 500;
+                text-decoration: none;
+            }
+            .navbar .nav .right li a:hover {
+                color: rgba(0, 0, 0, );
+                color: white;
+            }
+            .navbar .nav .right .loginreg {
+                margin: 5px;
+            }
+            .navbar .nav .right .loginreg a {
+                padding: 4px 10px;
+                text-decoration: none;
+                outline: none;
+                font-weight: 500;
+                color: rgba(0, 0, 0, 0.5);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-right: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                background-color: rgba(0, 0, 0, 0.3);
+                border-radius: 4px;
+                transition: all 0.6 ease;
+                display: inline-block;
+            }
+            .navbar .nav .right .loginreg a:hover {
+                color: rgba(0, 0, 0, 0.3);
+                color: white;
+            }
+            .top {
+                display: flex;
+                justify-content: space-between;
+            }
+            .welContainer {
+                margin-top: 10px;
+                padding: 20px;
+                padding-top: 30px;
+                width: 70%;
+                height: 870px;
+                /* float: right; */
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: 6px;
+                text-align: center;
+                justify-content: center;
+            }
+            .welContainer span {
+                font-size: 26px;
+                font-family: 'Silkscreen', cursive;
+                color: rgba(0, 0, 0, 0.6);
+            }
+            .welContainer h2 {
+                padding-top: 60px;
+                font-size: 25px;
+                text-align: center;
+                font-family: 'Poppins', sans-serif;
+                color: rgba(0, 0, 0, 0.6);
+            }
+            .welInnerContainerLeft {
+                width: 90%;
+                margin-top: 20px;
+                padding: 10px;
+                height: 210px;
+                font-weight: 700;
+                font-size: 30px;
+                background-color: rgba(0, 0, 0, 0.4);
+                color: rgba(255, 255, 255, 0.8);
+                border-radius: 4px;
+                text-align: center;
+            }
+            .welInnerContainerLeft i {
+                padding-top: 20px;
+                color: rgba(255, 255, 255, 0.7);
+                text-align: center;
+            }
+            .welInnerContainerLeft i::after {
+                margin-top: 4px;
+                content: "";
+                display: block;
+                width: 200px;
+                height: 1px;
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+            .welInnerContainerLeft p {
+                padding-left: 32px;
+                padding-right: 32px;
+                padding-top: 20px;
+                font-size: 20px;
+                font-weight: 350;
+                line-height: 1.2;
+            }
+            .welInnerContainerRight {
+                width: 90%;
+                margin-top: 20px;
+                margin-bottom: 30px;
+                padding: 10px;
+                height: 210px;
+                font-weight: 700;
+                font-size: 30px;
+                background-color: rgba(0, 0, 0, 0.4);
+                border-radius: 4px;
+                text-align: center;
+            }
+            .welInnerContainerRight i {
+                padding-top: 20px;
+                color: rgba(255, 255, 255, 0.7);
+                text-align: center;
+            }
+            .welInnerContainerRight i::after {
+                margin-top: 4px;
+                content: "";
+                display: block;
+                width: 200px;
+                height: 1px;
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+            .welInnerContainerRight p {
+                padding-left: 32px;
+                padding-right: 32px;
+                padding-top: 20px;
+                font-size: 20px;
+                font-weight: 350;
+                line-height: 1.2;
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .top .welContainer .newuser {
+                width: 94%;
+                margin: auto;
+                padding: 20px;
+                height: 120px;
+                background-color: rgba(0, 0, 0, 0.4);
+                border-radius: 4px;
+                color: rgba(0, 0, 0, 0.6);
+            }
+            .welContainer .newuser button {
+                display: flex;
+                justify-content: center;
+                outline: none;
+                font-weight: 500;
+                background-color: rgba(255, 255, 255, 0.7);
+                border: 9px solid rgba(0, 0, 0 , 0.1);
+                color: rgba(0, 0, 0, 0.6);
+                color: rgba(0, 0, 0, 0.6);
+                border-radius: 4px;
+                transition: all 0.6 ease;
+            }
+            .welContainer .newuser button:hover {
+                background-color: rgba(0, 0, 0, 0.6);
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                color: rgba(255, 255, 255, 0.6);
+            }
+            .verticalnav {
+                margin-top: 10px;
+                padding: 10px;
+                width: 28%;
+                height: 870px;
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                justify-content: center;
+                text-align: center;
+            }
+            .verticalnav span {
+                font-size: 28px;
+                font-weight: 700;
+            }
+            .verticalnav span::after {
+                content: " ";
+                margin-left: auto;
+                display: block;
+                height: 1px;
+                width: 150px;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .verticalnav h3 {
+                font-size: 22px;
+                margin-top: 30px;
+            }
+            .verticalnav .practice {
+                margin: auto;
+                width: 90%;
+                height: 90px;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.3);
+                border-radius: 3px;
+                justify-content: space-between;
+                display: flex;
+            }
+            .verticalnav .practice div p {
+                font-size: 12px;
+            }
+            .verticalnav .streak {
+                margin: auto;
+                margin-top: 15px;
+                padding: 20px;
+                padding-top: 40px;
+                width: 92%;
+                height: 300px;
+                background-color: rgba(0, 0, 0, 0.3);
+                border-radius: 3px;
+                color: rgba(255, 255, 255, 0.6);
+            }
+            .verticalnav .streak div {
+                color: rgba(0, 0, 0, 0.8);
+            }
+            .verticalnav .quote {
+                margin: auto;
+                width: 95%;
+                height: 250px;
+                margin-top: 20px;
+                padding-top: 30px;
+                padding: 4px;
+                background-color: rgba(0, 0, 0, 0.3);
+                border-radius: 3px;
+            }
+            .verticalnav .quote span {
+                font-size: 20px;
+                font-weight: 700;
+                color: rgba(0, 0, 0, 0.6);
+                line-height: 0.8;
+            }
+            .cardarea {
+                width: 100%;
+                height: 100%;
+                margin-top: 10px;
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: 4px;
+            }
+            .cardarea h2 {
+                margin-top: 100px;
+            }
+            .cardarea p span {
+                padding: 10px;
+                font-size: 50px;
+                line-height: 0.45;
+                color: rgba(0, 0, 0, 0.4);
+            }
+            .cardarea .cardsConatiner {
+                margin-top: 150px;
+                width: 100%;
+                padding: 30px;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.2);
+                /* margin-top: 150px;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 4px; */
+            }
+            .cardarea .cardsConatiner div {
+                width: 100%;
+                align-items: center;
+            }
+            .cardarea .cardsConatiner .card {
+                padding-top: 40px;
+                width: 100px;
+                height: auto;
+                background-color: rgba(0, 0, 0, 0.3);
+                border-radius: 4px;
+            }
+            .cardarea .cardsConatiner .card p {
+                font-size: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main" id="main">
+        <div class="innermain">
+            <nav class="navbar">
+                <div class="nav">
+                    <div class="left"><span>Querious</span></div>
+                    <div class="right">
+                      <ul>
+                          <li><a href="#">Home</a></li>
+                          <li><a href="/ask">Ask</a></li>
+                          <li><a href="/answer">Answer</a></li>
+                          <li><a href="#">Code</a></li>
+                          <li><a href="#">About us</a></li>
+                      </ul>
+
+                        <div class="loginreg">
+                            <a class="login" href="/login">Log in</a>
+                            <a class="register" href="/register">Register</a>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="top">
+            <div class="welContainer">
+                <span>Hello nuts! </span>
+                <span class="welcome">Welcome to Querious..</span>
+
+                <h2>New Way to learn </h2>
+
+                <div class="">
+                  <div class="welInnerContainerLeft">
+                      <i class="fa-solid fa-question"></i>
+
+                      <p>Got doubt or stuck while coding. No Problem, Querious is here solving your doubts.</p>
+                  </div>
+                  <div class="welInnerContainerRight">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+
+                      <p>Help others, solving their doubts, share your kowledge and build the community.</p>
+                  </div>
+                </div>
+
+                <div class="newuser">
+                    <h3><i class="fa-solid fa-less-than"></i> New to Querious? <i class="fa-solid fa-greater-than"></i> </h3>
+                    <button class="btnnewuser">Click to Create an account</button>
+                </div>
+
+            </div>
+
+            <div class="verticalnav">
+                <span>Practice</span>
+
+                <h3>Overview</h3>
+                <div class="practice">
+
+                    <div>
+                        <p><i class="fa-solid fa-flag"></i> Solved</p>
+                        <p><i class="fa-solid fa-percent"></i> Accuracy</p>
+                    </div>
+
+                    <div>
+                        <p>0</p>
+                        <p>0%</p>
+                    </div>
+                </div>
+
+                <div class="streak">
+                    <div>
+                        <p><i class="fa-solid fa-fire"></i> Streaks</p>
+                    </div>
+
+                    <p>Your Prograss history will show up here!</p>
+                </div>
+
+                <!-- <div class="quote">
+                    <span><i class="fa-solid fa-quote-left"></i>Programming is the skill best aquired by practice and example rather than from books</span>
+                </div> -->
+            </div>
+        </div>
+
+
+        <div class="cardarea">
+
+            <h2>Learn, Practice and enhance your skills.</h2>
+
+            <p> <span><i class="fa-solid fa-quote-left"></i></span>At the beginning of the college it is hard for many student to build connections with seniors and community with their kind of students. Querious made it easy to connect with your seniors
+                and resolve your queries or doubts by them.</p>
+
+            <div class="cardsConatiner">
+                <div class="row">
+                    <div class="mt-5 col-lg-4 col-md-12">
+                        <h3><i class="fa-solid fa-rocket"></i></h3>
+                        <h4>DevOps Engineer</h4>
+                        <p>Shipping new products and features requires teamwork and coordination. Forget checklists and long docs no one ever reads.</p>
+                    </div>
+                    <div class="mt-5 col-lg-4 col-md-12">
+                        <h3><i class="fa-solid fa-database"></i></h3>
+                        <h4>Data Scientist</h4>
+                        <p>Business decisions are better when backed by data. Give visibility to the data that support your strategies.</p>
+                    </div>
+                    <div class="mt-5 col-lg-4 col-md-12">
+                        <h3><i class="fa-solid fa-robot"></i></h3>
+                        <h4>AI / ML</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, incidunt.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 mt-5">
+                        <h3><i class="fa-brands fa-android"></i></h3>
+                        <h4>Android Dev</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, quia.</p>
+                    </div>
+                    <div class="col-lg-4 mt-5">
+                        <h3><i class="fa-solid fa-share-nodes"></i></h3>
+                        <h4>Block Chain Dev</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aspernatur.</p>
+                    </div>
+                    <div class="col-lg-4 mt-5">
+                        <h3><i class="fa-solid fa-sitemap"></i></h3>
+                        <h4>Web Developer</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, at.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
